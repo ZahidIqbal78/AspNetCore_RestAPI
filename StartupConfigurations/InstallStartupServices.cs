@@ -1,4 +1,4 @@
-namespace dotnet_webapi_example.StartupConfigurations
+namespace AspNetCore_RestAPI.StartupConfigurations
 {
     public static class InstallStartupServices
     {

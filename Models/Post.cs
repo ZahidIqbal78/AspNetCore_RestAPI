@@ -1,4 +1,4 @@
-namespace dotnet_webapi_example.Models
+namespace AspNetCore_RestAPI.Models
 {
     public class Post
     {

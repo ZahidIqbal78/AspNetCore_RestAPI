@@ -1,8 +1,8 @@
-using dotnet_webapi_example.Models;
-using dotnet_webapi_example.Routes;
+using AspNetCore_RestAPI.Models;
+using AspNetCore_RestAPI.Routes;
 using Microsoft.AspNetCore.Mvc;
 
-namespace dotnet_webapi_example.Controllers.V1
+namespace AspNetCore_RestAPI.Controllers.V1
 {
     public class PostsController : ControllerBase
     {

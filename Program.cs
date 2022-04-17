@@ -1,5 +1,5 @@
-using dotnet_webapi_example.Options;
-using dotnet_webapi_example.StartupConfigurations;
+using AspNetCore_RestAPI.Options;
+using AspNetCore_RestAPI.StartupConfigurations;
 
 var builder = WebApplication.CreateBuilder(args);
 

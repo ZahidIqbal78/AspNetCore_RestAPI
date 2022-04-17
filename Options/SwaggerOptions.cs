@@ -1,4 +1,4 @@
-namespace dotnet_webapi_example.Options
+namespace AspNetCore_RestAPI.Options
 {
     public class SwaggerOptions
     {

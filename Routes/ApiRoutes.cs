@@ -1,4 +1,4 @@
-namespace dotnet_webapi_example.Routes
+namespace AspNetCore_RestAPI.Routes
 {
     public static class ApiRoutes
     {
