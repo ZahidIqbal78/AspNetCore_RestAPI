@@ -2,9 +2,10 @@
 
 ---
 
-A simple ASP.NET Core REST API example.
+A simple ASP.NET Core REST API example/template.
 
- - .NET 6.0
+ - .NET 6.0.
+ - Entity Framework Core.
  - Swagger Documentation.
  - Clean startup.
  - API routing.
@@ -14,6 +15,6 @@ A simple ASP.NET Core REST API example.
 
 Coming up: 
 
- - Entity Framework implementation.
+ - JWT Configuration and Implementation.
 
 ---
