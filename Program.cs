@@ -1,9 +1,11 @@
 using AspNetCore_RestAPI.Options;
+using AspNetCore_RestAPI.Services;
 using AspNetCore_RestAPI.StartupConfigurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.InstallServicetoAssembly(builder.Configuration);
+
 
 var app = builder.Build();
 
@@ -23,7 +25,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

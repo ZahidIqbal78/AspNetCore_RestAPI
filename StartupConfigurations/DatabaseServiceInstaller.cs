@@ -1,4 +1,5 @@
 using AspNetCore_RestAPI.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace AspNetCore_RestAPI.StartupConfigurations
@@ -11,6 +12,10 @@ namespace AspNetCore_RestAPI.StartupConfigurations
             services.AddDbContext<TestDbContext>(options => 
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
             );
+
+            services.AddIdentity<IdentityUser, IdentityRole>(options => 
+                options.SignIn.RequireConfirmedAccount = false
+            ).AddEntityFrameworkStores<TestDbContext>();
         }
     }
 }
