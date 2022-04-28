@@ -11,11 +11,10 @@ A simple ASP.NET Core REST API example/template.
  - Clean startup (for .NET6 it is program.cs, but the process is same).
  - API routing.
  - Basic versioning of API endpoints.
+ - JWT Authentication
 
 ---
 
-Coming up: 
 
- - JWT Configuration and Implementation.
 
 ---
