@@ -15,6 +15,15 @@ namespace AspNetCore_RestAPI.Routes
             public const string Delete = BaseAddress + "/posts/{postId}";
         }
 
+        public static class Products
+        {
+            public const string GetAll = BaseAddress + "/products";
+            public const string Create = BaseAddress + "/products";
+            public const string Get = BaseAddress + "/products/{productId}";
+            public const string Update = BaseAddress + "/products/{productId}";
+            public const string Delete = BaseAddress + "/products/{productId}";
+        }
+
         public static class Identity
         {
             public const string Login = BaseAddress + "/identity/login";
