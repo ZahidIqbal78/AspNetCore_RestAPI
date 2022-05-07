@@ -1,3 +1,4 @@
+using dotnet_webapi_example.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,9 @@ namespace AspNetCore_RestAPI.Data
         }
 
         //DbSets
+        #region DbSets
+        public DbSet<Product> Products { get; set; }
+        #endregion
 
 
         protected override void OnModelCreating(ModelBuilder builder)
