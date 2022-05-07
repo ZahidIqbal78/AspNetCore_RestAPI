@@ -5,5 +5,6 @@ namespace AspNetCore_RestAPI.Services
     public interface IIdentityService
     {
         Task<AuthenticationResponse> RegisterUserAsync(string email, string password);
+        Task<AuthenticationResponse> LoginUserAsync(string email, string password);
     }
 }

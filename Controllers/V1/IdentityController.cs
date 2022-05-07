@@ -33,5 +33,24 @@ namespace AspNetCore_RestAPI.Controllers.V1
             });
         }
 
+        [HttpPost(ApiRoutes.Identity.Login)]
+        public async Task<IActionResult> Login([FromBody] LoginRequest requestBody)
+        {
+            var authenticationResponse = await this.identityService.LoginUserAsync(requestBody.Email, requestBody.Password);
+            if (authenticationResponse.Success == false)
+            {
+                return BadRequest(new AuthenticationResponse
+                {
+                    ErrorMessages = authenticationResponse.ErrorMessages,
+                    Success = false
+                });
+            }
+
+            return Ok(new AuthenticationResponse{
+                Success = true,
+                Token = authenticationResponse.Token
+            });
+        }
+
     }
 }
