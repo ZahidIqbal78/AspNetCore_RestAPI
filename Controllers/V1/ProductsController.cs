@@ -3,12 +3,15 @@ using dotnet_webapi_example.DTOs.V1.Requests;
 using dotnet_webapi_example.DTOs.V1.Responses;
 using dotnet_webapi_example.Models;
 using dotnet_webapi_example.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnet_webapi_example.Controllers.V1
 {
     //[Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [ApiController]
     public class ProductsController : ControllerBase
     {
