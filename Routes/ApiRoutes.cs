@@ -11,6 +11,8 @@ namespace AspNetCore_RestAPI.Routes
             public const string GetAll = BaseAddress + "/posts";
             public const string Create = BaseAddress + "/posts";
             public const string Get = BaseAddress + "/posts/{postId}";
+            public const string Update = BaseAddress + "/posts/{postId}";
+            public const string Delete = BaseAddress + "/posts/{postId}";
         }
 
         public static class Identity
