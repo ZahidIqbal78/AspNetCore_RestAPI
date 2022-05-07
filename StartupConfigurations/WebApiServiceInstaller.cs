@@ -37,7 +37,8 @@ namespace AspNetCore_RestAPI.StartupConfigurations
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
-                    RequireExpirationTime = false,
+                    RequireExpirationTime = true,
+                    ValidateAudience = false,
                     ValidateLifetime = true
                 };
             });
