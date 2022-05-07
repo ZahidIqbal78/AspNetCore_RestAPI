@@ -1,4 +1,5 @@
 using AspNetCore_RestAPI.Data;
+using dotnet_webapi_example.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,8 @@ namespace AspNetCore_RestAPI.StartupConfigurations
             services.AddIdentity<IdentityUser, IdentityRole>(options => 
                 options.SignIn.RequireConfirmedAccount = false
             ).AddEntityFrameworkStores<TestDbContext>();
+
+            services.AddSingleton<IPostService, PostService>();
         }
     }
 }
