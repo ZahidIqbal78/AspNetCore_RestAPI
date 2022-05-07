@@ -3,6 +3,7 @@ using System;
 using AspNetCore_RestAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace dotnet_webapi_example.Data.Migrations
 {
     [DbContext(typeof(TestDbContext))]
-    partial class TestDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220507173424_product_tbl_add")]
+    partial class product_tbl_add
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,9 +31,11 @@ namespace dotnet_webapi_example.Data.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("CreatedBy")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("varchar(1000)");
 
@@ -44,6 +48,7 @@ namespace dotnet_webapi_example.Data.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("UpdatedBy")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");

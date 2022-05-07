@@ -18,7 +18,8 @@ namespace AspNetCore_RestAPI.StartupConfigurations
                 options.SignIn.RequireConfirmedAccount = false
             ).AddEntityFrameworkStores<TestDbContext>();
 
-            services.AddSingleton<IPostService, PostService>();
+            //services.AddSingleton<IPostService, PostService>();
+            services.AddScoped<IProductService, ProductService>();
         }
     }
 }
