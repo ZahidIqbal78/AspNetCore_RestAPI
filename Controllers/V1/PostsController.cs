@@ -11,6 +11,7 @@ namespace AspNetCore_RestAPI.Controllers.V1
     /// This is a test controller to demonstrate the flow or the structure, no real
     /// database operations for Post model.
     /// </summary>
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class PostsController : ControllerBase
     {
         private IPostService _postService;
